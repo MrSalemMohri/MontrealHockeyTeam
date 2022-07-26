@@ -31,7 +31,7 @@ public class PlayerController {
     }
 
     @PutMapping("/api/player/{id}/captain")
-    public ResponseEntity<PlayerDto> updateEmployee(@PathVariable Integer id) {;
+    public ResponseEntity<PlayerDto> updatePlayer(@PathVariable Integer id) {;
         Player updatedplayer = playerService.updatePlayer(id);
         return new ResponseEntity<>(new PlayerDto(updatedplayer), HttpStatus.OK);
     }
