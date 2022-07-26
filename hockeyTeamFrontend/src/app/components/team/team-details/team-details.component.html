@@ -2,18 +2,18 @@
   <div *ngIf="team.id">
 
     <div>
-      <h3><label>Year :</label> {{ team.year }}</h3>
+      <h5><label>Year :</label> {{ team.year }}</h5>
     </div>
 
     <div>
-      <h4><label>Coach :</label></h4> {{ team.coach }}
+      <h5><label>Coach :</label> {{ team.coach }}</h5>
     </div>
     
     <div class="players">
-      <h4>Players :</h4>
+      <h5>Players :</h5>
       <div *ngFor="let player of team.players">
         <div class="player">
-          <span>{{ player.name }} {{player.lastname}}</span>
+          <span>{{ player.name }} {{player.lastname}} <strong>{{ player.position }}</strong></span>
           <div *ngIf="player.is_captain" class="captain">C</div>
         </div>
       </div>
