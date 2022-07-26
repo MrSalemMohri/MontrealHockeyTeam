@@ -1,0 +1,84 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <h2>Add Player</h2>
+
+      <div class="form-group">
+        <label for="teamyear">Team Year</label>
+        <input
+          type="text"
+          class="form-control"
+          id="teamyear"
+          required
+          [(ngModel)]="teamYear"
+          name="teamyear"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="number">Player Number</label>
+        <input
+          type="text"
+          class="form-control"
+          id="number"
+          required
+          [(ngModel)]="player.number"
+          name="number"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          required
+          [(ngModel)]="player.name"
+          name="name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Lastname</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastname"
+          required
+          [(ngModel)]="player.lastname"
+          name="lastname"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="position">Position</label>
+        <input
+          class="form-control"
+          id="position"
+          required
+          [(ngModel)]="player.position"
+          name="position"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="captain">Captain</label>
+        <input
+          class="form-control"
+          type="checkbox"
+          id="captain"
+          required
+          [(ngModel)]="player.is_captain"
+          name="captain"
+        />
+      </div>
+      <button (click)="savePlayer()" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>Player was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newPlayer()">Add</button>
+    </div>
+  </div>
+</div>

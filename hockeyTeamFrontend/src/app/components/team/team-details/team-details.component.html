@@ -1,0 +1,24 @@
+<div>
+  <div *ngIf="team.id">
+
+    <div>
+      <h3><label>Year :</label> {{ team.year }}</h3>
+    </div>
+
+    <div>
+      <h4><label>Coach :</label></h4> {{ team.coach }}
+    </div>
+    
+    <div class="players">
+      <h4>Players :</h4>
+      <div *ngFor="let player of team.players">
+        <div class="player">
+          <span>{{ player.name }} {{player.lastname}}</span>
+          <div *ngIf="player.is_captain" class="captain">C</div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
